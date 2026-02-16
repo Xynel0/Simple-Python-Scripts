@@ -21,6 +21,12 @@ while True:
             print("the number is lower than your guess")
         x = TryInt("try again: ")
     print(f"you won!! congratulations!! you tried {p} times")
-    pa = input("play again? (y/n) ").lower()
-    if pa != "y":
-        break
+    while True:
+        pa = input("play again? (y/n) ").strip().lower()
+        if pa == "n":
+            print("Thanks for playing! :)")
+            exit()
+        elif pa == "y":
+            break
+        else:
+            print("Invalid option. Please type 'y' or 'n'.")
